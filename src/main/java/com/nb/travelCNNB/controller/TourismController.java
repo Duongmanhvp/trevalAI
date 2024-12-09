@@ -1,11 +1,9 @@
 package com.nb.travelCNNB.controller;
 
-import com.nb.travelCNNB.dto.ItineraryRequest;
-import com.nb.travelCNNB.dto.PromptRequest;
-import com.nb.travelCNNB.dto.TravelRecommendationRequest;
-import com.nb.travelCNNB.dto.TravelRecommendationResponse;
+import com.nb.travelCNNB.dto.*;
 import com.nb.travelCNNB.service.OpenAIService;
 import com.nb.travelCNNB.service.TourismService;
+import com.nb.travelCNNB.service.UnsplashService;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +22,9 @@ public class TourismController {
 	@Autowired
 	private OpenAIService openAIService;
 	
+	@Autowired
+	private UnsplashService unsplashService;
+	
 	@PostMapping("/predict")
 	public TravelRecommendationResponse predictDestination(@RequestBody TravelRecommendationRequest request) {
 		return travelRecommendationService.predictDestination(request);
@@ -32,6 +33,13 @@ public class TourismController {
 	@PostMapping("/itinerary")
 	public String getItinerary(@RequestBody ItineraryRequest request) {
 		return openAIService.getItinerary(request);
+	}
+	
+	@GetMapping("/photos")
+	public Object getPhotos(@RequestParam String location,
+	                        @RequestParam(required = false, defaultValue = "1") int perPage) {
+		UnsplashRequest request = new UnsplashRequest(location, perPage);
+		return unsplashService.getPhotos(request);
 	}
 }
 	
