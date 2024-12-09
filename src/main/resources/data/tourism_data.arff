@@ -1,0 +1,19 @@
+@relation tourism_recommendation
+
+@attribute age numeric
+@attribute with {alone, couple, family, friends}
+@attribute budget {low, medium, high}
+@attribute interest {beach, mountain, city, cultural}
+@attribute destination {Vinh_Ha_Long, Pho_Co_Hoi_An, Sapa, Dong_Phong_Nha_Ke_Bang, Dao_Phu_Quoc, Da_Nang, Nha_Trang, Mui_Ne, Da_Lat, Cu_Lao_Cham, Hang_Son_Doong, Ba_Na_Hills, Dao_Con_Dao, Vuon_Quoc_Gia_Cat_Ba, Trang_An, Ninh_Binh, Ban_Gioc, Thac_Ban_Gioc, Moc_Chau, Deo_Ma_Pi_Leng, Cang_Vung_Tau, Nui_Yen_Tu, Chua_Bai_Dinh, Bao_Tang_Chien_Khu_Rung_Sat, Vinh_Van_Phong, Quang_Binh, Cu_Lao_Xanh, Dao_Ly_Son, Ban_Lat, Cao_Nguyen_Moc_Chau, Cuc_Phuong, Bach_Ma, Cham_Islands, Lang_Bien, Cai_Rang_Floating_Market, Tra_Su_Forest, Con_Dao_National_Park, Tay_Nguyen, My_Son_Sanctuary, Cu_Chi_Tunnels, Cam_Ranh, Quy_Nhon, Thien_Mu_Pagoda, Temple_Of_Literature, Imperial_City_Hue, Ho_Chi_Minh_City, Ha_Giang_Loop, Terraced_Rice_Fields_Mu_Cang_Chai, Bac_Ha_Market, Lai_Chau, Yen_Bai, Dien_Bien_Phu}
+
+@data
+24, couple, medium, beach, Dao_Phu_Quoc
+28, couple, high, beach, Nha_Trang
+35, family, medium, cultural, Pho_Co_Hoi_An
+22, friends, low, mountain, Sapa
+42, family, high, cultural, Da_Nang
+27, couple, medium, beach, Mui_Ne
+45, family, high, city, Da_Lat
+19, friends, low, mountain, Dong_Phong_Nha_Ke_Bang
+33, family, medium, cultural, Vinh_Ha_Long
+26, alone, low, beach, Cu_Lao_Cham

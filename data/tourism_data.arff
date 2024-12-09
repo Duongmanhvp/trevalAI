@@ -1,0 +1,13 @@
+@relation tourism_recommendation
+
+@attribute age numeric
+@attribute with {alone, couple, family, friends}
+@attribute budget {low, medium, high}
+@attribute interest {beach, mountain, city, cultural}
+@attribute destination {Bali, Paris, Tokyo, London}
+
+@data
+25, couple, medium, beach, Bali
+35, family, high, mountain, Paris
+22, alone, low, city, Tokyo
+40, family, medium, cultural, London
